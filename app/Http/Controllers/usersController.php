@@ -5,7 +5,11 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
+
+
 
 class usersController extends Controller
 {
@@ -14,7 +18,6 @@ class usersController extends Controller
 
     public function login(Request $request)
     {
-
         $user = User::where('email', $request->email)->first();
         if (!$user || !Hash::check($request->password, $user->password)) {
             return response()->json([
@@ -35,14 +38,17 @@ class usersController extends Controller
 
     public function register(Request $request)
     {
+        
         if (self::checkIfEmailExist($request->email)) {
             return response()->json([
                 'isSuccess' => false,
                 'message' => 'email ( ' . $request->email . ' ) telah digunakan'
             ], 400);
         };
-
+        
+        
         User::Create([
+            'user_id'=>'user-'.str::random(16),
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),

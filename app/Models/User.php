@@ -21,12 +21,14 @@ class User extends Authenticatable
     
     use HasApiTokens, HasFactory, Notifiable,AuthenticatableTrait;
     protected $connection='mongodb';
+    protected $primaryKey='user_id';
 
 
     protected $fillable = [
         'name',
         'email',
         'password',
+        'user_id'
     ];
 
     /**
