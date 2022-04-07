@@ -38,17 +38,17 @@ class usersController extends Controller
 
     public function register(Request $request)
     {
-        
+
         if (self::checkIfEmailExist($request->email)) {
             return response()->json([
                 'isSuccess' => false,
                 'message' => 'email ( ' . $request->email . ' ) telah digunakan'
             ], 400);
         };
-        
-        
+
+
         User::Create([
-            'user_id'=>'user-'.str::random(16),
+            'user_id' => 'user-' . str::random(16),
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),

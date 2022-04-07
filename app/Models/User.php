@@ -24,6 +24,7 @@ class User extends Authenticatable
     protected $primaryKey='user_id';
 
 
+
     protected $fillable = [
         'name',
         'email',
@@ -39,6 +40,7 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
+        '_id'
     ];
 
     /**
@@ -49,4 +51,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function plan()
+    {
+        return $this->hasMany(plan::class,'user_id','user_id');
+    }
 }
