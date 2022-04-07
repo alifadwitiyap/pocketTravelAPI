@@ -1,5 +1,4 @@
 # Project: pocketTravelAPI
-#### **Endpoint untuk mendaftarkan user yang belum pernah menggunakan aplikasi**
 
 ## End-point: register user
 ### Method: POST
@@ -27,7 +26,6 @@
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: login user
-Endpoint untuk mendaftarkan user yang belum pernah menggunakan aplikasi
 ### Method: POST
 >```
 >http://localhost:8000/api/login
