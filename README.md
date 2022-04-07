@@ -1,45 +1,215 @@
+# Project: pocketTravelAPI
+#### **Endpoint untuk mendaftarkan user yang belum pernah menggunakan aplikasi**
 
-![npm](https://img.shields.io/npm/v/postman-to-markdown?style=plastic)
+## End-point: register user
+### Method: POST
+>```
+>localhost:8000/api/register
+>```
+### Headers
 
-# 📦  postman-to-markdown
+|Content-Type|Value|
+|---|---|
+|Accept|application/json|
 
-This package generate markdown document from postman.
 
-First export the collection from postman.
+### Body (**raw**)
 
-![Drag Racing](./resources/export_collection.png)
-
-![Drag Racing](./resources/export.png)
-
-Save the collection file.
-
-## Install
-
-```npm
-npm install -g postman-to-markdown
+```json
+{
+    "name":"alif",
+    "email":"1@gmail.com",
+    "password":"alo"
+}
 ```
 
-# Usage
 
-Execute postman-to-markdown specifying the collection file.
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
-```bash
-postman-to-markdown TwitterTracker.postman_collection.json 
+## End-point: login user
+Endpoint untuk mendaftarkan user yang belum pernah menggunakan aplikasi
+### Method: POST
+>```
+>http://localhost:8000/api/login
+>```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|Accept|application/json|
+
+
+### Body (**raw**)
+
+```json
+{
+    "email":"1@gmail.com",
+    "password":"alo"
+}
 ```
 
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: logout user
+### Method: DELETE
+>```
+>http://localhost:8000/api/logout
+>```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|Accept|application/json|
+
+
+### 🔑 Authentication bearer
+
+|Param|value|Type|
+|---|---|---|
+|token|{{token}}|string|
+
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: add plan
+### Method: POST
+>```
+>http://localhost:8000/api/plan/{{userId}}
+>```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|Accept|application/json|
+
+
+### Body (**raw**)
+
+```json
+{
+     "tanggal":"2022-03-02",
+     "negara":"fukandas",
+     "lokasi":"lokotre"
+}
 ```
-Reading file TwitterTracker.postman_collection.json
 
-Generating markdown file ...
+### 🔑 Authentication bearer
 
-Documentation was created correctly TwitterTracker.md
+|Param|value|Type|
+|---|---|---|
+|token|{{token}}|string|
+
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: get all user plan
+### Method: GET
+>```
+>http://localhost:8000/api/plan/{{userId}}
+>```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|Accept|application/json|
+
+
+### 🔑 Authentication bearer
+
+|Param|value|Type|
+|---|---|---|
+|token|{{token}}|string|
+
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: get plan by plan_id
+### Method: GET
+>```
+>http://localhost:8000/api/plan/{{planId}}/detail
+>```
+### 🔑 Authentication bearer
+
+|Param|value|Type|
+|---|---|---|
+|token|{{token}}|string|
+
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: update plan by plan_id
+### Method: PUT
+>```
+>http://localhost:8000/api/plan/{{planId}}/detail
+>```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|Accept|application/json|
+
+
+### Body (**raw**)
+
+```json
+{
+    "negara":"german",
+    "lokasi":"bekasi",
+    "tanggal":"2022-03-18",
+    "jadwal":[
+        {
+            "waktu":"12:00",
+            "lokasi":"domo arigato"
+        },
+        {
+            "waktu":"15:00",
+            "lokasi":"kamidasa"
+        }
+    ]
+}
 ```
-The package will create .md file.
 
-Example of file generated [example.md](https://github.com/bautistaj/postman-to-markdown/blob/master/resources/example.md)
+### 🔑 Authentication bearer
 
-# Contributing
-If someone wants to add or improve something, I invite you to collaborate directly in this repository: [postman-to-markdown](https://github.com/bautistaj/postman-to-markdown.git)
+|Param|value|Type|
+|---|---|---|
+|token|{{token}}|string|
 
-# License
-postman-to-markdown is released under the [MIT License](https://opensource.org/licenses/MIT).
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: delete plan by plan_id
+### Method: DELETE
+>```
+>http://localhost:8000/api/plan/{{planId}}/detail
+>```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|Accept|application/json|
+
+
+### Body (**raw**)
+
+```json
+
+```
+
+### 🔑 Authentication bearer
+
+|Param|value|Type|
+|---|---|---|
+|token|{{token}}|string|
+
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+_________________________________________________
+Powered By: [postman-to-markdown](https://github.com/bautistaj/postman-to-markdown/)
