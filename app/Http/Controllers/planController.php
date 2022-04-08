@@ -25,10 +25,10 @@ class planController extends Controller
 
         $plan = $user->plan()->create([
             'plan_id' => 'plan-' . str::random(16),
-            'tanggal' => $request->tanggal,
-            'negara' => $request->negara,
-            'lokasi' => $request->lokasi,
-            'jadwal' => [],
+            'name' => $request->name,
+            'date' => $request->date,
+            'country' => $request->country,
+            'schedule' => $request->schedule,
         ]);
 
         return response()->json([
@@ -106,10 +106,10 @@ class planController extends Controller
         }
 
         $plan->update([
-            "negara" => $request->negara,
-            "lokasi" => $request->lokasi,
-            "jadwal" => $request->jadwal,
-            "tanggal" => $request->tanggal,
+            'name' => $request->name,
+            'date' => $request->date,
+            'country' => $request->country,
+            'schedule' => $request->schedule,
         ]);
 
         return response()->json([

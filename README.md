@@ -1,9 +1,13 @@
 # Project: pocketTravelAPI
 
+
+#### change PersonalAccessToken.php model to  Jenssegers\Mongodb\Eloquent\Model
+
+
 ## End-point: register user
 ### Method: POST
 >```
->localhost:8000/api/register
+>http://localhost:8000/api/register
 >```
 ### Headers
 
@@ -16,9 +20,9 @@
 
 ```json
 {
-    "name":"alif",
-    "email":"1@gmail.com",
-    "password":"alo"
+    "name":"alif adwitiya pratama",
+    "email":"alif@gmail.com",
+    "password":"password"
 }
 ```
 
@@ -41,8 +45,8 @@
 
 ```json
 {
-    "email":"1@gmail.com",
-    "password":"alo"
+    "email":"alif@gmail.com",
+    "password":"password"
 }
 ```
 
@@ -87,9 +91,10 @@
 
 ```json
 {
-     "tanggal":"2022-03-02",
-     "negara":"fukandas",
-     "lokasi":"lokotre"
+    "name": "London Holiday Plans",
+    "date": "2022-02-22", 
+    "country": "GB",
+    "schedule": []
 }
 ```
 
@@ -130,6 +135,13 @@
 >```
 >http://localhost:8000/api/plan/{{planId}}/detail
 >```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|Accept|application/json|
+
+
 ### 🔑 Authentication bearer
 
 |Param|value|Type|
@@ -156,21 +168,52 @@
 
 ```json
 {
-    "negara":"german",
-    "lokasi":"bekasi",
-    "tanggal":"2022-03-18",
-    "jadwal":[
+    "name": "London Holiday Plans",
+    "date": "2022-02-22",
+    "country": "GB",
+    "schedule": [
         {
-            "waktu":"12:00",
-            "lokasi":"domo arigato"
+            "time": "09:30",
+            "activity": "Breakfast"
         },
         {
-            "waktu":"15:00",
-            "lokasi":"kamidasa"
+            "time": "10:30",
+            "activity": "Go to Tower of London"
+        },
+        {
+            "time": "12:00",
+            "activity": "London Bridge, Tower Bridge"
+        },
+        {
+            "time": "14:30",
+            "activity": "Museum of London"
+        },
+        {
+            "time": "15:30",
+            "activity": "Snack time!"
+        },
+        {
+            "time": "17:30",
+            "activity": "Dinner at Jamie Oliver's Resto"
+        },
+        {
+            "time": "19:30",
+            "activity": "Watch Les Miserables"
+        },
+        {
+            "time": "21.00",
+            "activity": "Sleep"
         }
     ]
 }
 ```
+
+### Query Params
+
+|Param|value|
+|---|---|
+||null|
+
 
 ### 🔑 Authentication bearer
 
