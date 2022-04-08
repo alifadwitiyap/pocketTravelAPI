@@ -18,10 +18,10 @@ class plan extends Model
     protected $fillable = [
         'user_id',
         'plan_id',
-        'tanggal',
-        'negara',
-        'lokasi',
-        'jadwal',
+        'date',
+        'country',
+        'name',
+        'schedule',
     ];
 
     public function user()
