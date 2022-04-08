@@ -1,13 +1,9 @@
 # Project: pocketTravelAPI
 
-
-#### change PersonalAccessToken.php model to  Jenssegers\Mongodb\Eloquent\Model
-
-
 ## End-point: register user
 ### Method: POST
 >```
->http://localhost:8000/api/register
+>https://pocket-travel-api.herokuapp.com/api/register
 >```
 ### Headers
 
@@ -32,7 +28,7 @@
 ## End-point: login user
 ### Method: POST
 >```
->http://localhost:8000/api/login
+>https://pocket-travel-api.herokuapp.com/api/login
 >```
 ### Headers
 
@@ -56,7 +52,7 @@
 ## End-point: logout user
 ### Method: DELETE
 >```
->http://localhost:8000/api/logout
+>https://pocket-travel-api.herokuapp.com/api/logout
 >```
 ### Headers
 
@@ -75,10 +71,10 @@
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
-## End-point: add plan
+## End-point: create plan
 ### Method: POST
 >```
->http://localhost:8000/api/plan/{{userId}}
+>https://pocket-travel-api.herokuapp.com/api/plan/{{userId}}
 >```
 ### Headers
 
@@ -111,7 +107,7 @@
 ## End-point: get all user plan
 ### Method: GET
 >```
->http://localhost:8000/api/plan/{{userId}}
+>https://pocket-travel-api.herokuapp.com/api/plan/{{userId}}
 >```
 ### Headers
 
@@ -133,7 +129,7 @@
 ## End-point: get plan by plan_id
 ### Method: GET
 >```
->http://localhost:8000/api/plan/{{planId}}/detail
+>https://pocket-travel-api.herokuapp.com/api/plan/{{planId}}/detail
 >```
 ### Headers
 
@@ -155,7 +151,7 @@
 ## End-point: update plan by plan_id
 ### Method: PUT
 >```
->http://localhost:8000/api/plan/{{planId}}/detail
+>https://pocket-travel-api.herokuapp.com/api/plan/{{planId}}/detail
 >```
 ### Headers
 
@@ -228,7 +224,7 @@
 ## End-point: delete plan by plan_id
 ### Method: DELETE
 >```
->http://localhost:8000/api/plan/{{planId}}/detail
+>https://pocket-travel-api.herokuapp.com/api/plan/{{planId}}/detail
 >```
 ### Headers
 
