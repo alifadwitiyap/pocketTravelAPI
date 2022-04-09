@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChecklistController;
 use App\Http\Controllers\planController;
 use App\Http\Controllers\usersController;
 use Illuminate\Support\Facades\Route;
@@ -26,7 +27,11 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::get('plan/{plan_id}/detail', [planController::class, 'getPlanByID']);
     Route::delete('plan/{plan_id}/detail', [planController::class, 'deletePlanByID']);
     Route::put('plan/{plan_id}/detail', [planController::class, 'updatePlanByID']);
-
+    
+    Route::post('checklist/{user_id}', [ChecklistController::class, 'createChecklistItem']);
+    Route::get('checklist/{user_id}', [ChecklistController::class, 'getAllUserChecklistItem']);
+    Route::put('checklist/{item_id}', [ChecklistController::class, 'updateChecklistItemByID']);
+    Route::delete('checklist/{item_id}', [ChecklistController::class, 'deleteChecklistByID']);
 });
 
 Route::post('/login', [usersController::class, 'login']);

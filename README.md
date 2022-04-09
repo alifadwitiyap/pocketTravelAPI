@@ -74,7 +74,7 @@
 ## End-point: create plan
 ### Method: POST
 >```
->https://pocket-travel-api.herokuapp.com/api/plan/{{userId}}
+>https://pocket-travel-api.herokuapp.com/api/plan/{{userId}}s
 >```
 ### Headers
 
@@ -238,6 +238,111 @@
 ```json
 
 ```
+
+### 🔑 Authentication bearer
+
+|Param|value|Type|
+|---|---|---|
+|token|{{token}}|string|
+
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: create checklist item
+### Method: POST
+>```
+>https://pocket-travel-api.herokuapp.com/api/checklist/{{userId}}
+>```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|Accept|application/json|
+
+
+### Body (**raw**)
+
+```json
+{
+    "name":"2 blankets"
+}
+```
+
+### 🔑 Authentication bearer
+
+|Param|value|Type|
+|---|---|---|
+|token|{{token}}|string|
+
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: get all user checklist item
+### Method: GET
+>```
+>https://pocket-travel-api.herokuapp.com/api/checklist/{{userId}}
+>```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|Accept|application/json|
+
+
+### 🔑 Authentication bearer
+
+|Param|value|Type|
+|---|---|---|
+|token|{{token}}|string|
+
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: update checklist item by item_id
+### Method: PUT
+>```
+>https://pocket-travel-api.herokuapp.com/api/checklist/{{itemId}}
+>```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|Accept|application/json|
+
+
+### Body (**raw**)
+
+```json
+{
+    "name":"item ini telah terupdate",
+    "is_checked":true
+}
+```
+
+### 🔑 Authentication bearer
+
+|Param|value|Type|
+|---|---|---|
+|token|{{token}}|string|
+
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: delete checklist item by item_id
+### Method: DELETE
+>```
+>https://pocket-travel-api.herokuapp.com/api/checklist/{{itemId}}
+>```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|Accept|application/json|
+
 
 ### 🔑 Authentication bearer
 
