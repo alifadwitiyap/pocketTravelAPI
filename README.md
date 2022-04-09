@@ -74,7 +74,7 @@
 ## End-point: create plan
 ### Method: POST
 >```
->https://pocket-travel-api.herokuapp.com/api/plan/{{userId}}s
+>https://pocket-travel-api.herokuapp.com/api/plan/{{userId}}
 >```
 ### Headers
 
