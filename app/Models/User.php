@@ -56,4 +56,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(plan::class,'user_id','user_id');
     }
+
+    public function list()
+    {
+        return $this->hasMany(item::class,'user_id','user_id');
+    }
 }
