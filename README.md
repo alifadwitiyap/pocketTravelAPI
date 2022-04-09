@@ -204,13 +204,6 @@
 }
 ```
 
-### Query Params
-
-|Param|value|
-|---|---|
-||null|
-
-
 ### 🔑 Authentication bearer
 
 |Param|value|Type|
@@ -233,11 +226,7 @@
 |Accept|application/json|
 
 
-### Body (**raw**)
 
-```json
-
-```
 
 ### 🔑 Authentication bearer
 
