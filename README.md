@@ -344,15 +344,6 @@
 |Accept|application/json|
 
 
-### Body (**raw**)
-
-```json
-{
-    "name":"item ini telah terupdate",
-    "is_checked":true
-}
-```
-
 ### 🔑 Authentication bearer
 
 |Param|value|Type|
