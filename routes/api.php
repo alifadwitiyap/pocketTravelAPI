@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DiaryController;
 use App\Http\Controllers\ChecklistController;
 use App\Http\Controllers\planController;
 use App\Http\Controllers\usersController;
@@ -32,6 +33,10 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::get('checklist/{user_id}', [ChecklistController::class, 'getAllUserChecklistItem']);
     Route::put('checklist/{item_id}', [ChecklistController::class, 'updateChecklistItemByID']);
     Route::delete('checklist/{item_id}', [ChecklistController::class, 'deleteChecklistByID']);
+
+    // diary
+    Route::resource('diary', DiaryController::class);
+
 });
 
 Route::post('/login', [usersController::class, 'login']);
