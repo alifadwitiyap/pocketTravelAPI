@@ -19,7 +19,7 @@ class DiaryController extends Controller
     {
         if(Auth::check())
         {
-            $data = Diary::all()->where('user_id', Auth::id());
+            $data = Diary::where('user_id', Auth::id())->get();
             return response()->json([ "data" => $data ], 200);
         }
     }
