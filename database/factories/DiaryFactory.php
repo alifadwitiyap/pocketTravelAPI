@@ -21,11 +21,11 @@ class DiaryFactory extends Factory
             'country' => $this->faker->country(),
             'location' => $this->faker->city(),
             'image' => [
-                'https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/720px-Flag_of_Brazil.svg.png',
+                'https://eu4.paradoxwikis.com/images/a/ad/Bosnia.png',
                 'https://eu4.paradoxwikis.com/images/6/6a/Hungary.png',
                 'https://eu4.paradoxwikis.com/images/e/e1/Venice.png',
             ],
-            'caption' => $this->faker->bs(),
+            'caption' => $this->faker->realText($maxNbChars = 200, $indexSize = 2),
             'date' => $this->faker->date(DATE_W3C),
         ];
     }

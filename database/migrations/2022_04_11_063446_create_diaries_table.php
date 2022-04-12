@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\User;
 
 return new class extends Migration
 {
@@ -15,12 +16,12 @@ return new class extends Migration
     {
         Schema::create('diaries', function (Blueprint $table) {
             $table->id();
-            $table->string('user_id');
+            $table->foreignIdFor(User::class);
             $table->string('country');
             $table->string('location');
-            $table->string('image');
-            $table->string('caption');
-            $table->string('date');
+            $table->json('image');
+            $table->text('caption');
+            $table->date('date');
             $table->timestamps();
         });
     }
