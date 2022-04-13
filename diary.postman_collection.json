@@ -45,14 +45,21 @@
 				}
 			],
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{uri}}/public",
+					"raw": "https://pocket-travel-api.herokuapp.com/api/public",
+					"protocol": "https",
 					"host": [
-						"{{uri}}"
+						"pocket-travel-api",
+						"herokuapp",
+						"com"
 					],
 					"path": [
+						"api",
 						"public"
 					]
 				}
@@ -97,6 +104,9 @@
 				}
 			],
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -109,11 +119,15 @@
 					}
 				},
 				"url": {
-					"raw": "{{uri}}/register",
+					"raw": "https://pocket-travel-api.herokuapp.com/api/register",
+					"protocol": "https",
 					"host": [
-						"{{uri}}"
+						"pocket-travel-api",
+						"herokuapp",
+						"com"
 					],
 					"path": [
+						"api",
 						"register"
 					]
 				}
@@ -161,6 +175,9 @@
 				}
 			],
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -173,11 +190,15 @@
 					}
 				},
 				"url": {
-					"raw": "{{uri}}/login",
+					"raw": "https://pocket-travel-api.herokuapp.com/api/login",
+					"protocol": "https",
 					"host": [
-						"{{uri}}"
+						"pocket-travel-api",
+						"herokuapp",
+						"com"
 					],
 					"path": [
+						"api",
 						"login"
 					]
 				}
@@ -222,11 +243,21 @@
 				}
 			],
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"country\": \"EU\",\n    \"location\": \"Bruxelles\",\n    \"image\": [\"https://eu4.paradoxwikis.com/images/a/ad/Bosnia.png\", \"https://eu4.paradoxwikis.com/images/6/6a/Hungary.png\", \"https://eu4.paradoxwikis.com/images/e/e1/Venice.png\"],\n    \"caption\": \"yes\",\n    \"isPublic\": true\n}",
+					"raw": "{\n    \"country\": \"DE\",\n    \"location\": \"Bruxelles\",\n    \"image\": \"https://picsum.photos/640/360\",\n    \"caption\": \"March Hare said in a furious passion, and went on in a more subdued tone, and everybody laughed, 'Let the jury wrote it down into a line along the passage into the wood for fear of their hearing.\",\n    \"isPublic\": true\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -234,11 +265,15 @@
 					}
 				},
 				"url": {
-					"raw": "{{uri}}/diary",
+					"raw": "https://pocket-travel-api.herokuapp.com/api/diary",
+					"protocol": "https",
 					"host": [
-						"{{uri}}"
+						"pocket-travel-api",
+						"herokuapp",
+						"com"
 					],
 					"path": [
+						"api",
 						"diary"
 					]
 				}
@@ -285,14 +320,28 @@
 				}
 			],
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{uri}}/diary",
+					"raw": "https://pocket-travel-api.herokuapp.com/api/diary",
+					"protocol": "https",
 					"host": [
-						"{{uri}}"
+						"pocket-travel-api",
+						"herokuapp",
+						"com"
 					],
 					"path": [
+						"api",
 						"diary"
 					]
 				}
@@ -339,14 +388,28 @@
 				}
 			],
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{uri}}/diary",
+					"raw": "https://pocket-travel-api.herokuapp.com/api/diary",
+					"protocol": "https",
 					"host": [
-						"{{uri}}"
+						"pocket-travel-api",
+						"herokuapp",
+						"com"
 					],
 					"path": [
+						"api",
 						"diary"
 					]
 				}
@@ -391,14 +454,28 @@
 				}
 			],
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{uri}}/diary/{{_id}}",
+					"raw": "https://pocket-travel-api.herokuapp.com/api/diary/{{_id}}",
+					"protocol": "https",
 					"host": [
-						"{{uri}}"
+						"pocket-travel-api",
+						"herokuapp",
+						"com"
 					],
 					"path": [
+						"api",
 						"diary",
 						"{{_id}}"
 					]
@@ -444,11 +521,21 @@
 				}
 			],
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"country\": \"EU\",\n    \"location\": \"Sudetenland\",\n    \"image\": [\"https://eu4.paradoxwikis.com/images/a/ad/Bosnia.png\", \"https://eu4.paradoxwikis.com/images/6/6a/Hungary.png\", \"https://eu4.paradoxwikis.com/images/e/e1/Venice.png\"],\n    \"caption\": \"yes\",\n    \"isPublic\": false\n}",
+					"raw": "{\n    \"country\": \"EU\",\n    \"location\": \"Sudetenland\",\n    \"image\": \"https://picsum.photos/640/360\",\n    \"caption\": \"March Hare said in a furious passion, and went on in a more subdued tone, and everybody laughed, 'Let the jury wrote it down into a line along the passage into the wood for fear of their hearing.\",\n    \"isPublic\": false\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -456,11 +543,15 @@
 					}
 				},
 				"url": {
-					"raw": "{{uri}}/diary/{{_id}}",
+					"raw": "https://pocket-travel-api.herokuapp.com/api/diary/{{_id}}",
+					"protocol": "https",
 					"host": [
-						"{{uri}}"
+						"pocket-travel-api",
+						"herokuapp",
+						"com"
 					],
 					"path": [
+						"api",
 						"diary",
 						"{{_id}}"
 					]
@@ -506,14 +597,28 @@
 				}
 			],
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{uri}}/diary/{{_id}}",
+					"raw": "https://pocket-travel-api.herokuapp.com/api/diary/{{_id}}",
+					"protocol": "https",
 					"host": [
-						"{{uri}}"
+						"pocket-travel-api",
+						"herokuapp",
+						"com"
 					],
 					"path": [
+						"api",
 						"diary",
 						"{{_id}}"
 					]
@@ -559,23 +664,28 @@
 				}
 			],
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "DELETE",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
-					"raw": "{{uri}}/diary/{{_id}}",
+					"raw": "https://pocket-travel-api.herokuapp.com/api/diary/{{_id}}",
+					"protocol": "https",
 					"host": [
-						"{{uri}}"
+						"pocket-travel-api",
+						"herokuapp",
+						"com"
 					],
 					"path": [
+						"api",
 						"diary",
 						"{{_id}}"
 					]
@@ -621,6 +731,16 @@
 				}
 			],
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "DELETE",
 				"header": [],
 				"body": {
@@ -628,11 +748,15 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "{{uri}}/logout",
+					"raw": "https://pocket-travel-api.herokuapp.com/api/logout",
+					"protocol": "https",
 					"host": [
-						"{{uri}}"
+						"pocket-travel-api",
+						"herokuapp",
+						"com"
 					],
 					"path": [
+						"api",
 						"logout"
 					]
 				}
@@ -640,16 +764,6 @@
 			"response": []
 		}
 	],
-	"auth": {
-		"type": "bearer",
-		"bearer": [
-			{
-				"key": "token",
-				"value": "{{token}}",
-				"type": "string"
-			}
-		]
-	},
 	"event": [
 		{
 			"listen": "prerequest",
@@ -668,24 +782,6 @@
 					""
 				]
 			}
-		}
-	],
-	"variable": [
-		{
-			"key": "token",
-			"value": ""
-		},
-		{
-			"key": "user_id",
-			"value": ""
-		},
-		{
-			"key": "_id",
-			"value": ""
-		},
-		{
-			"key": "uri",
-			"value": "https://pockettravel-api.herokuapp.com/api"
 		}
 	]
 }

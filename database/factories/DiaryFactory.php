@@ -17,16 +17,12 @@ class DiaryFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => $this->faker->name(),
-            'country' => $this->faker->country(),
+            'user_id' => 'user-'.substr($this->faker->name(), 0, 16),
+            'country' => $this->faker->countryCode(),
             'location' => $this->faker->city(),
-            'image' => [
-                'https://eu4.paradoxwikis.com/images/a/ad/Bosnia.png',
-                'https://eu4.paradoxwikis.com/images/6/6a/Hungary.png',
-                'https://eu4.paradoxwikis.com/images/e/e1/Venice.png',
-            ],
+            'image' => 'https://picsum.photos/640/360',
             'caption' => $this->faker->realText($maxNbChars = 200, $indexSize = 2),
-            'isPublic' => true,
+            'isPublic' => $this->faker->boolean(),
         ];
     }
 }
