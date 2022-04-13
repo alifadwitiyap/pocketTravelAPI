@@ -22,12 +22,10 @@ class DiaryController extends Controller
             $data = Diary::where('user_id', Auth::id())
                 ->orderBy('created_at', 'desc')->get();
             return response()->json([ "data" => $data ], 200);
-        } else
-        {
-            $data = Diary::where('isPublic', true)
-            ->orderBy('created_at', 'desc')->get();
-            return response()->json([ "data" => $data ], 200);
-        }
+       }
+       $data = Diary::where('isPublic', true)
+           ->orderBy('created_at', 'desc')->get();
+       return response()->json([ "data" => $data ], 200);
     }
 
     /**
