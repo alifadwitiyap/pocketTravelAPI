@@ -17,7 +17,7 @@ class DiaryFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => 'user-'.substr($this->faker->name(), 0, 16),
+            'user_id' => 'user-'.substr($this->faker->md5(), 0, 16),
             'country' => $this->faker->countryCode(),
             'location' => $this->faker->city(),
             'image' => 'https://picsum.photos/640/360',
