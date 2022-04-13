@@ -26,7 +26,7 @@ class DiaryFactory extends Factory
                 'https://eu4.paradoxwikis.com/images/e/e1/Venice.png',
             ],
             'caption' => $this->faker->realText($maxNbChars = 200, $indexSize = 2),
-            'date' => $this->faker->date(DATE_W3C),
+            'isPublic' => true,
         ];
     }
 }

@@ -6,6 +6,60 @@
 	},
 	"item": [
 		{
+			"name": "public",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    var responseJson = pm.response.json();",
+							"    pm.collectionVariables.set(\"_id\", responseJson.data[0]._id);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include([]);",
+							"});",
+							"pm.test(\"Your test name\", function () {",
+							"    // var jsonData = pm.response.json();",
+							"    // pm.expect(jsonData.value).to.eql(100);",
+							"});",
+							"pm.test(\"Body is correct\", function () {",
+							"    pm.response.to.have.body();",
+							"});",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201, 202]);",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{uri}}/public",
+					"host": [
+						"{{uri}}"
+					],
+					"path": [
+						"public"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "register",
 			"event": [
 				{
@@ -55,16 +109,11 @@
 					}
 				},
 				"url": {
-					"raw": "https://pocket-travel-api.herokuapp.com/api/register",
+					"raw": "{{uri}}/register",
 					"host": [
-						"0",
-						"0",
-						"0",
-						"0"
+						"{{uri}}"
 					],
-					"port": "8000",
 					"path": [
-						"api",
 						"register"
 					]
 				}
@@ -124,16 +173,11 @@
 					}
 				},
 				"url": {
-					"raw": "https://pocket-travel-api.herokuapp.com/api/login",
+					"raw": "{{uri}}/login",
 					"host": [
-						"0",
-						"0",
-						"0",
-						"0"
+						"{{uri}}"
 					],
-					"port": "8000",
 					"path": [
-						"api",
 						"login"
 					]
 				}
@@ -178,21 +222,11 @@
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{token}}",
-							"type": "string"
-						}
-					]
-				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"country\": \"EU\",\n    \"location\": \"Bruxelles\",\n    \"image\": [\"https://eu4.paradoxwikis.com/images/a/ad/Bosnia.png\", \"https://eu4.paradoxwikis.com/images/6/6a/Hungary.png\", \"https://eu4.paradoxwikis.com/images/e/e1/Venice.png\"],\n    \"caption\": \"yes\",\n    \"date\": \"no\"\n}",
+					"raw": "{\n    \"country\": \"EU\",\n    \"location\": \"Bruxelles\",\n    \"image\": [\"https://eu4.paradoxwikis.com/images/a/ad/Bosnia.png\", \"https://eu4.paradoxwikis.com/images/6/6a/Hungary.png\", \"https://eu4.paradoxwikis.com/images/e/e1/Venice.png\"],\n    \"caption\": \"yes\",\n    \"isPublic\": true\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -200,18 +234,12 @@
 					}
 				},
 				"url": {
-					"raw": "https://pocket-travel-api.herokuapp.com/api/diary/",
+					"raw": "{{uri}}/diary",
 					"host": [
-						"0",
-						"0",
-						"0",
-						"0"
+						"{{uri}}"
 					],
-					"port": "8000",
 					"path": [
-						"api",
-						"diary",
-						""
+						"diary"
 					]
 				}
 			},
@@ -257,31 +285,15 @@
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{token}}",
-							"type": "string"
-						}
-					]
-				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://pocket-travel-api.herokuapp.com/api/diary/",
+					"raw": "{{uri}}/diary",
 					"host": [
-						"0",
-						"0",
-						"0",
-						"0"
+						"{{uri}}"
 					],
-					"port": "8000",
 					"path": [
-						"api",
-						"diary",
-						""
+						"diary"
 					]
 				}
 			},
@@ -327,31 +339,15 @@
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{token}}",
-							"type": "string"
-						}
-					]
-				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://pocket-travel-api.herokuapp.com/api/diary/",
+					"raw": "{{uri}}/diary",
 					"host": [
-						"0",
-						"0",
-						"0",
-						"0"
+						"{{uri}}"
 					],
-					"port": "8000",
 					"path": [
-						"api",
-						"diary",
-						""
+						"diary"
 					]
 				}
 			},
@@ -394,63 +390,15 @@
 					}
 				}
 			],
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{token}}",
-							"type": "string"
-						}
-					]
-				},
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "country",
-							"value": "us",
-							"type": "text"
-						},
-						{
-							"key": "location",
-							"value": "bruxelles",
-							"type": "text"
-						},
-						{
-							"key": "image",
-							"value": "sample",
-							"type": "text"
-						},
-						{
-							"key": "caption",
-							"value": "yes",
-							"type": "text"
-						},
-						{
-							"key": "date",
-							"value": "asdas",
-							"type": "text"
-						}
-					]
-				},
 				"url": {
-					"raw": "https://pocket-travel-api.herokuapp.com/api/diary/{{_id}}",
+					"raw": "{{uri}}/diary/{{_id}}",
 					"host": [
-						"0",
-						"0",
-						"0",
-						"0"
+						"{{uri}}"
 					],
-					"port": "8000",
 					"path": [
-						"api",
 						"diary",
 						"{{_id}}"
 					]
@@ -496,21 +444,11 @@
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{token}}",
-							"type": "string"
-						}
-					]
-				},
 				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"country\": \"EU\",\n    \"location\": \"Sudetenland\",\n    \"image\": [\"https://eu4.paradoxwikis.com/images/a/ad/Bosnia.png\", \"https://eu4.paradoxwikis.com/images/6/6a/Hungary.png\", \"https://eu4.paradoxwikis.com/images/e/e1/Venice.png\"],\n    \"caption\": \"yes\",\n    \"date\": \"no\"\n}",
+					"raw": "{\n    \"country\": \"EU\",\n    \"location\": \"Sudetenland\",\n    \"image\": [\"https://eu4.paradoxwikis.com/images/a/ad/Bosnia.png\", \"https://eu4.paradoxwikis.com/images/6/6a/Hungary.png\", \"https://eu4.paradoxwikis.com/images/e/e1/Venice.png\"],\n    \"caption\": \"yes\",\n    \"isPublic\": false\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -518,16 +456,11 @@
 					}
 				},
 				"url": {
-					"raw": "https://pocket-travel-api.herokuapp.com/api/diary/{{_id}}",
+					"raw": "{{uri}}/diary/{{_id}}",
 					"host": [
-						"0",
-						"0",
-						"0",
-						"0"
+						"{{uri}}"
 					],
-					"port": "8000",
 					"path": [
-						"api",
 						"diary",
 						"{{_id}}"
 					]
@@ -572,63 +505,15 @@
 					}
 				}
 			],
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{token}}",
-							"type": "string"
-						}
-					]
-				},
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "country",
-							"value": "us",
-							"type": "text"
-						},
-						{
-							"key": "location",
-							"value": "bruxelles",
-							"type": "text"
-						},
-						{
-							"key": "image",
-							"value": "sample",
-							"type": "text"
-						},
-						{
-							"key": "caption",
-							"value": "yes",
-							"type": "text"
-						},
-						{
-							"key": "date",
-							"value": "asdas",
-							"type": "text"
-						}
-					]
-				},
 				"url": {
-					"raw": "https://pocket-travel-api.herokuapp.com/api/diary/{{_id}}",
+					"raw": "{{uri}}/diary/{{_id}}",
 					"host": [
-						"0",
-						"0",
-						"0",
-						"0"
+						"{{uri}}"
 					],
-					"port": "8000",
 					"path": [
-						"api",
 						"diary",
 						"{{_id}}"
 					]
@@ -674,16 +559,6 @@
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{token}}",
-							"type": "string"
-						}
-					]
-				},
 				"method": "DELETE",
 				"header": [],
 				"body": {
@@ -696,16 +571,11 @@
 					}
 				},
 				"url": {
-					"raw": "https://pocket-travel-api.herokuapp.com/api/diary/{{_id}}",
+					"raw": "{{uri}}/diary/{{_id}}",
 					"host": [
-						"0",
-						"0",
-						"0",
-						"0"
+						"{{uri}}"
 					],
-					"port": "8000",
 					"path": [
-						"api",
 						"diary",
 						"{{_id}}"
 					]
@@ -751,16 +621,6 @@
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{token}}",
-							"type": "string"
-						}
-					]
-				},
 				"method": "DELETE",
 				"header": [],
 				"body": {
@@ -768,16 +628,11 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "https://pocket-travel-api.herokuapp.com/api/logout",
+					"raw": "{{uri}}/logout",
 					"host": [
-						"0",
-						"0",
-						"0",
-						"0"
+						"{{uri}}"
 					],
-					"port": "8000",
 					"path": [
-						"api",
 						"logout"
 					]
 				}
@@ -786,7 +641,14 @@
 		}
 	],
 	"auth": {
-		"type": "bearer"
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
 	},
 	"event": [
 		{
@@ -820,6 +682,10 @@
 		{
 			"key": "_id",
 			"value": ""
+		},
+		{
+			"key": "uri",
+			"value": "https://pockettravel-api.herokuapp.com/api"
 		}
 	]
 }

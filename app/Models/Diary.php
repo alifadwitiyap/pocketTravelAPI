@@ -16,6 +16,6 @@ class Diary extends Eloquent
         'location',
         'image',
         'caption',
-        'date',
+        'isPublic',
     ];
 }

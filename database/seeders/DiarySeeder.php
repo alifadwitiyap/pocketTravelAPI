@@ -14,6 +14,6 @@ class DiarySeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Diary::factory(10)->create();
+        //
     }
 }

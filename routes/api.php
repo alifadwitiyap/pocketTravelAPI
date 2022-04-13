@@ -41,3 +41,4 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
 
 Route::post('/login', [usersController::class, 'login']);
 Route::post('/register', [usersController::class, 'register']);
+Route::get('/public', [DiaryController::class, 'index']);

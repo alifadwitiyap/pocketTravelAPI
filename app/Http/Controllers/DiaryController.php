@@ -19,7 +19,13 @@ class DiaryController extends Controller
     {
         if(Auth::check())
         {
-            $data = Diary::where('user_id', Auth::id())->get();
+            $data = Diary::where('user_id', Auth::id())
+                ->orderBy('created_at', 'desc')->get();
+            return response()->json([ "data" => $data ], 200);
+        } else
+        {
+            $data = Diary::where('isPublic', true)
+            ->orderBy('created_at', 'desc')->get();
             return response()->json([ "data" => $data ], 200);
         }
     }
@@ -50,7 +56,7 @@ class DiaryController extends Controller
             $diary->location = $request->location;
             $diary->image = $request->image;
             $diary->caption = $request->caption;
-            $diary->date = $request->date;
+            $diary->isPublic = $request->isPublic;
 
             $diary->save();
             return response()->json([], 201);
@@ -100,7 +106,7 @@ class DiaryController extends Controller
             $diary->location = $request->location;
             $diary->image = $request->image;
             $diary->caption = $request->caption;
-            $diary->date = $request->date;
+            $diary->isPublic = $request->isPublic;
             $diary->save();
 
             return response()->json([], 204);
