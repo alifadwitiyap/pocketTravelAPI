@@ -346,26 +346,30 @@
 ## End-point: Get all public diary
 ### Method: GET
 >```
->https://pocket-travel-api.herokuapp.com/public
+>https://pocket-travel-api.herokuapp.com/api/public
 >```
+### 🔑 Authentication noauth
+
+|Param|value|Type|
+|---|---|---|
+
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
-
-
 
 ## End-point: Add diary
 ### Method: POST
 >```
->https://pocket-travel-api.herokuapp.com/diary
+>https://pocket-travel-api.herokuapp.com/api/diary
 >```
 ### Body (**raw**)
 
 ```json
 {
-    "country": "EU",
+    "country": "DE",
     "location": "Bruxelles",
-    "image": ["https://eu4.paradoxwikis.com/images/a/ad/Bosnia.png", "https://eu4.paradoxwikis.com/images/6/6a/Hungary.png", "https://eu4.paradoxwikis.com/images/e/e1/Venice.png"],
-    "caption": "yes",
+    "image": "https://picsum.photos/640/360",
+    "caption": "March Hare said in a furious passion, and went on in a more subdued tone, and everybody laughed, 'Let the jury wrote it down into a line along the passage into the wood for fear of their hearing.",
     "isPublic": true
 }
 ```
@@ -376,39 +380,44 @@
 |---|---|---|
 |token|{{token}}|string|
 
+
+
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: Get all user diary
-### Method: GET 
+### Method: GET
 >```
->https://pocket-travel-api.herokuapp.com/diary
+>https://pocket-travel-api.herokuapp.com/api/diary
 >```
 ### 🔑 Authentication bearer
 
 |Param|value|Type|
 |---|---|---|
 |token|{{token}}|string|
+
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: Get diary by id
 ### Method: GET
 >```
->https://pocket-travel-api.herokuapp.com/diary/{{_id}}
+>https://pocket-travel-api.herokuapp.com/api/diary/{{_id}}
 >```
-
 ### 🔑 Authentication bearer
 
 |Param|value|Type|
 |---|---|---|
 |token|{{token}}|string|
 
+
+
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: Update diary by id
 ### Method: PUT
 >```
->https://pocket-travel-api.herokuapp.com/diary/{{_id}}
+>https://pocket-travel-api.herokuapp.com/api/diary/{{_id}}
 >```
 ### Body (**raw**)
 
@@ -416,8 +425,8 @@
 {
     "country": "EU",
     "location": "Sudetenland",
-    "image": ["https://eu4.paradoxwikis.com/images/a/ad/Bosnia.png", "https://eu4.paradoxwikis.com/images/6/6a/Hungary.png", "https://eu4.paradoxwikis.com/images/e/e1/Venice.png"],
-    "caption": "yes",
+    "image": "https://picsum.photos/640/360",
+    "caption": "March Hare said in a furious passion, and went on in a more subdued tone, and everybody laughed, 'Let the jury wrote it down into a line along the passage into the wood for fear of their hearing.",
     "isPublic": false
 }
 ```
@@ -428,19 +437,24 @@
 |---|---|---|
 |token|{{token}}|string|
 
+
+
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: Delete diary by id
 ### Method: DELETE
 >```
->https://pocket-travel-api.herokuapp.com/diary/{{_id}}
+>https://pocket-travel-api.herokuapp.com/api/diary/{{_id}}
 >```
-
 ### 🔑 Authentication bearer
 
 |Param|value|Type|
 |---|---|---|
 |token|{{token}}|string|
 
-________________________________________________
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+_________________________________________________
 Powered By: [postman-to-markdown](https://github.com/bautistaj/postman-to-markdown/)
