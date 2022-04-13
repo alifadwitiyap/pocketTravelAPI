@@ -347,10 +347,18 @@
 
 # Diary
 
+## End-point: public
+### Method: GET
+>```
+>{{uri}}/public
+>```
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
 ## End-point: register
 ### Method: POST
 >```
->https://pocket-travel-api.herokuapp.com/api/register
+>{{uri}}/register
 >```
 ### Body (**raw**)
 
@@ -368,7 +376,7 @@
 ## End-point: login
 ### Method: POST
 >```
->https://pocket-travel-api.herokuapp.com/api/login
+>{{uri}}/login
 >```
 ### Body (**raw**)
 
@@ -385,7 +393,7 @@
 ## End-point: store
 ### Method: POST
 >```
->https://pocket-travel-api.herokuapp.com/api/diary/
+>{{uri}}/diary
 >```
 ### Body (**raw**)
 
@@ -395,16 +403,9 @@
     "location": "Bruxelles",
     "image": ["https://eu4.paradoxwikis.com/images/a/ad/Bosnia.png", "https://eu4.paradoxwikis.com/images/6/6a/Hungary.png", "https://eu4.paradoxwikis.com/images/e/e1/Venice.png"],
     "caption": "yes",
-    "date": "no"
+    "isPublic": true
 }
 ```
-
-### 🔑 Authentication bearer
-
-|Param|value|Type|
-|---|---|---|
-|token|{{token}}|string|
-
 
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
@@ -412,63 +413,31 @@
 ## End-point: check-store
 ### Method: GET
 >```
->https://pocket-travel-api.herokuapp.com/api/diary/
+>{{uri}}/diary
 >```
-### 🔑 Authentication bearer
-
-|Param|value|Type|
-|---|---|---|
-|token|{{token}}|string|
-
-
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: index
 ### Method: GET
 >```
->https://pocket-travel-api.herokuapp.com/api/diary/
+>{{uri}}/diary
 >```
-### 🔑 Authentication bearer
-
-|Param|value|Type|
-|---|---|---|
-|token|{{token}}|string|
-
-
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: show
 ### Method: GET
 >```
->https://pocket-travel-api.herokuapp.com/api/diary/{{_id}}
+>{{uri}}/diary/{{_id}}
 >```
-### Body formdata
-
-|Param|value|Type|
-|---|---|---|
-|country|us|text|
-|location|bruxelles|text|
-|image|sample|text|
-|caption|yes|text|
-|date|asdas|text|
-
-
-### 🔑 Authentication bearer
-
-|Param|value|Type|
-|---|---|---|
-|token|{{token}}|string|
-
-
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: update
 ### Method: PUT
 >```
->https://pocket-travel-api.herokuapp.com/api/diary/{{_id}}
+>{{uri}}/diary/{{_id}}
 >```
 ### Body (**raw**)
 
@@ -478,16 +447,9 @@
     "location": "Sudetenland",
     "image": ["https://eu4.paradoxwikis.com/images/a/ad/Bosnia.png", "https://eu4.paradoxwikis.com/images/6/6a/Hungary.png", "https://eu4.paradoxwikis.com/images/e/e1/Venice.png"],
     "caption": "yes",
-    "date": "no"
+    "isPublic": false
 }
 ```
-
-### 🔑 Authentication bearer
-
-|Param|value|Type|
-|---|---|---|
-|token|{{token}}|string|
-
 
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
@@ -495,33 +457,15 @@
 ## End-point: check-update
 ### Method: GET
 >```
->https://pocket-travel-api.herokuapp.com/api/diary/{{_id}}
+>{{uri}}/diary/{{_id}}
 >```
-### Body formdata
-
-|Param|value|Type|
-|---|---|---|
-|country|us|text|
-|location|bruxelles|text|
-|image|sample|text|
-|caption|yes|text|
-|date|asdas|text|
-
-
-### 🔑 Authentication bearer
-
-|Param|value|Type|
-|---|---|---|
-|token|{{token}}|string|
-
-
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: destroy
 ### Method: DELETE
 >```
->https://pocket-travel-api.herokuapp.com/api/diary/{{_id}}
+>{{uri}}/diary/{{_id}}
 >```
 ### Body (**raw**)
 
@@ -529,32 +473,18 @@
 
 ```
 
-### 🔑 Authentication bearer
-
-|Param|value|Type|
-|---|---|---|
-|token|{{token}}|string|
-
-
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: logout
 ### Method: DELETE
 >```
->https://pocket-travel-api.herokuapp.com/api/logout
+>{{uri}}/logout
 >```
 ### Body formdata
 
 |Param|value|Type|
 |---|---|---|
-
-
-### 🔑 Authentication bearer
-
-|Param|value|Type|
-|---|---|---|
-|token|{{token}}|string|
 
 
 

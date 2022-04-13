@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('location');
             $table->json('image');
             $table->text('caption');
-            $table->date('date');
+            $table->boolean('isPublic');
             $table->timestamps();
         });
     }
