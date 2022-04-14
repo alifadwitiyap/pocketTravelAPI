@@ -12,6 +12,7 @@ class Diary extends Eloquent
     protected $connection = 'mongodb';
     protected $fillable = [
         'user_id',
+        'user',
         'country',
         'location',
         'image',
