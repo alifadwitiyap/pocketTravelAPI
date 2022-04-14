@@ -21,8 +21,8 @@ class DiaryFactory extends Factory
             'user' => $this->faker->name(),
             'country' => $this->faker->countryCode(),
             'location' => $this->faker->city(),
-            'image' => 'https://picsum.photos/640/360',
-            'caption' => $this->faker->realText($maxNbChars = 200, $indexSize = 2),
+            'image' => 'https://loremflickr.com/640/320/travel?random='.$this->faker->randomNumber(6, true),
+            'caption' => $this->faker->realTextBetween($minNbChars = 360, $maxNbChars = 640, $indexSize = 3),
             'isPublic' => $this->faker->boolean(),
         ];
     }
