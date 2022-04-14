@@ -50,7 +50,7 @@ class DiaryController extends Controller
         {
             $diary = new Diary;
             $diary->user_id = Auth::id();
-            $diary->user = User::find(Auth::id())->get(['name']);
+            $diary->user = User::find(Auth::id())->name;
             $diary->country = $request->country;
             $diary->location = $request->location;
             $diary->image = $request->image;
