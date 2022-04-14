@@ -1,9 +1,16 @@
 # Project: pocketTravelAPI
 
+Pocket Travel adalah aplikasi yang digunakan sebagai manajemen perjalanan serta semacam social media sederhana untuk membagikan diary perjalanan. Aplikasi ini rencananya akan dikembangkan di android dan juga web sehingga aplikasi ini dapat digunakan dimana saja oleh user.
+
+anda dapat mengakses aplikasi kami pada link berikut :<br>
+[Pocket Travel Website](https://pocket-travel-develop.netlify.app/)
+
+
+
 ## End-point: Register user
 ### Method: POST
 >```
->https://pocket-travel-api.herokuapp.com/api/register
+>https://pocket-travel.herokuapp.com/api/register
 >```
 ### Headers
 
@@ -28,7 +35,7 @@
 ## End-point: Login user
 ### Method: POST
 >```
->https://pocket-travel-api.herokuapp.com/api/login
+>https://pocket-travel.herokuapp.com/api/login
 >```
 ### Headers
 
@@ -52,7 +59,7 @@
 ## End-point: Logout user
 ### Method: DELETE
 >```
->https://pocket-travel-api.herokuapp.com/api/logout
+>https://pocket-travel.herokuapp.com/api/logout
 >```
 ### Headers
 
@@ -74,7 +81,7 @@
 ## End-point: Add plan
 ### Method: POST
 >```
->https://pocket-travel-api.herokuapp.com/api/plan/{{userId}}
+>https://pocket-travel.herokuapp.com/api/plan/{{userId}}
 >```
 ### Headers
 
@@ -107,7 +114,7 @@
 ## End-point: Get all user plan
 ### Method: GET
 >```
->https://pocket-travel-api.herokuapp.com/api/plan/{{userId}}
+>https://pocket-travel.herokuapp.com/api/plan/{{userId}}
 >```
 ### Headers
 
@@ -129,7 +136,7 @@
 ## End-point: Get plan by plan_id
 ### Method: GET
 >```
->https://pocket-travel-api.herokuapp.com/api/plan/{{planId}}/detail
+>https://pocket-travel.herokuapp.com/api/plan/{{planId}}/detail
 >```
 ### Headers
 
@@ -151,7 +158,7 @@
 ## End-point: Update plan by plan_id
 ### Method: PUT
 >```
->https://pocket-travel-api.herokuapp.com/api/plan/{{planId}}/detail
+>https://pocket-travel.herokuapp.com/api/plan/{{planId}}/detail
 >```
 ### Headers
 
@@ -217,7 +224,7 @@
 ## End-point: Delete plan by plan_id
 ### Method: DELETE
 >```
->https://pocket-travel-api.herokuapp.com/api/plan/{{planId}}/detail
+>https://pocket-travel.herokuapp.com/api/plan/{{planId}}/detail
 >```
 ### Headers
 
@@ -241,7 +248,7 @@
 ## End-point: Add checklist item
 ### Method: POST
 >```
->https://pocket-travel-api.herokuapp.com/api/checklist/{{userId}}
+>https://pocket-travel.herokuapp.com/api/checklist/{{userId}}
 >```
 ### Headers
 
@@ -271,7 +278,7 @@
 ## End-point: Get all user checklist item
 ### Method: GET
 >```
->https://pocket-travel-api.herokuapp.com/api/checklist/{{userId}}
+>https://pocket-travel.herokuapp.com/api/checklist/{{userId}}
 >```
 ### Headers
 
@@ -293,7 +300,7 @@
 ## End-point: Update checklist item by item_id
 ### Method: PUT
 >```
->https://pocket-travel-api.herokuapp.com/api/checklist/{{itemId}}
+>https://pocket-travel.herokuapp.com/api/checklist/{{itemId}}
 >```
 ### Headers
 
@@ -324,7 +331,7 @@
 ## End-point: Delete checklist item by item_id
 ### Method: DELETE
 >```
->https://pocket-travel-api.herokuapp.com/api/checklist/{{itemId}}
+>https://pocket-travel.herokuapp.com/api/checklist/{{itemId}}
 >```
 ### Headers
 
@@ -346,8 +353,13 @@
 ## End-point: Get all public diary
 ### Method: GET
 >```
->https://pocket-travel-api.herokuapp.com/api/public
+>https://pocket-travel.herokuapp.com/api/public
 >```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|Accept|application/json|
 ### 🔑 Authentication noauth
 
 |Param|value|Type|
@@ -360,8 +372,13 @@
 ## End-point: Add diary
 ### Method: POST
 >```
->https://pocket-travel-api.herokuapp.com/api/diary
+>https://pocket-travel.herokuapp.com/api/diary
 >```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|Accept|application/json|
 ### Body (**raw**)
 
 ```json
@@ -387,23 +404,31 @@
 ## End-point: Get all user diary
 ### Method: GET
 >```
->https://pocket-travel-api.herokuapp.com/api/diary
+>https://pocket-travel.herokuapp.com/api/diary
 >```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|Accept|application/json|
 ### 🔑 Authentication bearer
 
 |Param|value|Type|
 |---|---|---|
 |token|{{token}}|string|
 
-
-
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: Get diary by id
 ### Method: GET
 >```
->https://pocket-travel-api.herokuapp.com/api/diary/{{_id}}
+>https://pocket-travel.herokuapp.com/api/diary/{{_id}}
 >```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|Accept|application/json|
 ### 🔑 Authentication bearer
 
 |Param|value|Type|
@@ -417,8 +442,13 @@
 ## End-point: Update diary by id
 ### Method: PUT
 >```
->https://pocket-travel-api.herokuapp.com/api/diary/{{_id}}
+>https://pocket-travel.herokuapp.com/api/diary/{{_id}}
 >```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|Accept|application/json|
 ### Body (**raw**)
 
 ```json
@@ -430,22 +460,24 @@
     "isPublic": false
 }
 ```
-
 ### 🔑 Authentication bearer
 
 |Param|value|Type|
 |---|---|---|
 |token|{{token}}|string|
 
-
-
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: Delete diary by id
 ### Method: DELETE
 >```
->https://pocket-travel-api.herokuapp.com/api/diary/{{_id}}
+>https://pocket-travel.herokuapp.com/api/diary/{{_id}}
 >```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|Accept|application/json|
 ### 🔑 Authentication bearer
 
 |Param|value|Type|
