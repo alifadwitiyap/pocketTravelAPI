@@ -17,6 +17,7 @@ return new class extends Migration
         Schema::create('diaries', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(User::class);
+            $table->string('user');
             $table->string('country');
             $table->string('location');
             $table->json('image');
