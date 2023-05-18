@@ -11,14 +11,14 @@ use Illuminate\Auth\Authenticatable as AuthenticatableTrait;
 
 class User extends Authenticatable
 {
-    
-    
+
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
-    
+
     use HasApiTokens, HasFactory, Notifiable,AuthenticatableTrait;
     protected $connection='mongodb';
     protected $primaryKey='user_id';

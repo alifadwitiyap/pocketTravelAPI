@@ -3,6 +3,24 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [3.9.2] - 2022-09-01
+
+### Addded 
+- Add single word name mutators [#2438](https://github.com/jenssegers/laravel-mongodb/pull/2438) by [@RosemaryOrchard](https://github.com/RosemaryOrchard) & [@mrneatly](https://github.com/mrneatly).
+
+### Fixed
+- Fix stringable sort [#2420](https://github.com/jenssegers/laravel-mongodb/pull/2420) by [@apeisa](https://github.com/apeisa).
+
+## [3.9.1] - 2022-03-11
+
+### Added
+- Backport support for cursor pagination [#2358](https://github.com/jenssegers/laravel-mongodb/pull/2358) by [@Jeroenwv](https://github.com/Jeroenwv).
+
+### Fixed
+- Check if queue service is disabled [#2357](https://github.com/jenssegers/laravel-mongodb/pull/2357) by [@robjbrain](https://github.com/robjbrain).
+
+## [3.9.0] - 2022-02-17
+
 ### Added
 - Compatibility with Laravel 9.x [#2344](https://github.com/jenssegers/laravel-mongodb/pull/2344) by [@divine](https://github.com/divine).
 
