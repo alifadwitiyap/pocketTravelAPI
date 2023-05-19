@@ -3,8 +3,9 @@
 Pocket Travel adalah aplikasi yang digunakan sebagai manajemen perjalanan serta semacam social media sederhana untuk membagikan diary perjalanan. Aplikasi ini rencananya akan dikembangkan di android dan juga web sehingga aplikasi ini dapat digunakan dimana saja oleh user.
 
 anda dapat mengakses aplikasi kami pada link berikut :<br>
-[Pocket Travel Website](https://pocket-travel-develop.netlify.app/)
+[SC Pocket Travel Website](https://github.com/marifauzan/pocket-travel-frontend)
 
+> **Note:** hosting backend mati dikarenakan free tier heroku dihapuskan, sehingga project hanya dapat dijalankan secara local.
 
 
 ## End-point: Register user
